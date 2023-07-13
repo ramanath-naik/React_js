@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 
 class valueer extends Component { 
+
+    componentDidUpdate(prevProps,prevState){
+        console.log("prevProps",prevProps);
+        console.log("prevState",prevState);
+        if (prevProps.counter.value !== this.props.counter.value){
+            //Ajax call and get new data from the server
+        }
+
+    }
+
+    componentWillUnmount(){
+        console.log("Counter-unmount");
+}
    
     render() { 
+
+        console.log("counter-rendered");
+
         return (
             <div>
                 <span className={this.getBadgeClasses()}>{this.formatvalue()}</span>  
