@@ -20,7 +20,7 @@ export default function Useref() {
   return (
     <div>
         <h1>Learning useref</h1>
-        <input ref={refElement} type="text" value={name} on onChange={(e)=> setName(e.target.value)}></input>
+        <input ref={refElement} type="text" value={name} onChange={(e)=> setName(e.target.value)}></input>
         <button onClick={Reset}>Reset</button>
         <p>Number of times render: {count.current}</p>
 
